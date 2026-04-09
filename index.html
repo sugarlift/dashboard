@@ -52,6 +52,14 @@
 
     .section-divider { height: 1px; background: #f0f0f0; }
 
+    /* Collapsible priorities */
+    .priority-header { cursor: pointer; user-select: none; }
+    .priority-header:active { opacity: 0.7; }
+    .priority-tasks { overflow: hidden; transition: max-height 0.3s ease, opacity 0.2s ease; }
+    .priority-tasks.collapsed { max-height: 0 !important; opacity: 0; }
+    .chevron { transition: transform 0.25s ease; display: inline-block; }
+    .chevron.collapsed { transform: rotate(-90deg); }
+
     /* Chat bubble */
     .chat-fab {
       position: fixed; bottom: 24px; right: 24px;
@@ -174,9 +182,22 @@
 
   <script>
     const STORAGE_KEY = 'sugarlift-dashboard-done';
+    const COLLAPSE_KEY = 'sugarlift-dashboard-collapsed';
 
     // State
     let completedTasks = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+    let collapsedPriorities = JSON.parse(localStorage.getItem(COLLAPSE_KEY) || '{}');
+
+    function saveCollapseState() {
+      localStorage.setItem(COLLAPSE_KEY, JSON.stringify(collapsedPriorities));
+    }
+
+    function togglePriority(index) {
+      if (collapsedPriorities[index]) { delete collapsedPriorities[index]; }
+      else { collapsedPriorities[index] = true; }
+      saveCollapseState();
+      renderFromCache();
+    }
 
     function saveState() {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(completedTasks));
@@ -217,25 +238,41 @@
       cachedData = data;
       document.getElementById('updatedAt').textContent = `Updated ${data.updated}`;
 
-      // Priorities
+      // Priorities (collapsible, completed tasks sink to bottom)
       let prioritiesHtml = '';
       data.priorities.forEach((p, i) => {
+        const isCollapsed = collapsedPriorities[i];
+        const chevronClass = isCollapsed ? 'chevron collapsed' : 'chevron';
+        const tasksClass = isCollapsed ? 'priority-tasks collapsed' : 'priority-tasks';
+
+        // Sort tasks: incomplete first, completed last
+        const taskItems = p.tasks.map((t, j) => ({ text: t, id: taskId('p', i, j), done: !!completedTasks[taskId('p', i, j)] }));
+        const sorted = [...taskItems.filter(t => !t.done), ...taskItems.filter(t => t.done)];
+        const doneCount = taskItems.filter(t => t.done).length;
+        const totalCount = taskItems.length;
+        const countBadge = doneCount > 0 ? `<span class="text-xs text-gray-400 ml-2">${doneCount}/${totalCount}</span>` : '';
+
         prioritiesHtml += `
           <div class="mb-6">
-            <div class="flex items-baseline gap-3 mb-2">
+            <div class="priority-header flex items-baseline gap-3 mb-2" onclick="togglePriority(${i})">
               <span class="text-2xl font-bold text-gray-300">${i + 1}</span>
-              <h3 class="text-base font-semibold text-gray-900">${p.name}</h3>
+              <h3 class="text-base font-semibold text-gray-900 flex items-center">
+                <span class="${chevronClass} mr-1.5 text-gray-400 text-xs">&#9660;</span>
+                ${p.name}${countBadge}
+              </h3>
             </div>
-            <div class="ml-10">
-              ${p.tasks.map((t, j) => renderTaskItem(taskId('p', i, j), t)).join('')}
+            <div class="ml-10 ${tasksClass}" style="max-height: ${isCollapsed ? '0' : sorted.length * 50 + 'px'}">
+              ${sorted.map(t => renderTaskItem(t.id, t.text)).join('')}
             </div>
           </div>`;
       });
       document.getElementById('priorities').innerHTML = prioritiesHtml;
 
-      // Quick Tasks
+      // Quick Tasks (completed sink to bottom)
+      const quickItems = data.quickTasks.map((t, i) => ({ text: t, id: taskId('q', i), done: !!completedTasks[taskId('q', i)] }));
+      const sortedQuick = [...quickItems.filter(t => !t.done), ...quickItems.filter(t => t.done)];
       document.getElementById('quickTasksList').innerHTML =
-        data.quickTasks.map((t, i) => renderTaskItem(taskId('q', i), t)).join('');
+        sortedQuick.map(t => renderTaskItem(t.id, t.text)).join('');
 
       // Emails
       document.getElementById('emailsList').innerHTML = data.emails.map(e => {
