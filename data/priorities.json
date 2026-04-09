@@ -38,28 +38,52 @@
       "company": "Related Companies",
       "subject": "Willets Point install coordination",
       "preview": "Following up on the March invoice and delivery schedule",
-      "urgent": true
+      "urgent": true,
+      "summary": "Saemi is asking about the Willets Point delivery timeline. She needs confirmation on the install date and wants to know if the March invoice ($65,158) has been processed. She also mentioned coordinating access to the building for the install crew.",
+      "replyStrategies": [
+        {"label": "Confirm timeline", "description": "Confirm the install date and let her know the invoice was sent, ask about building access requirements"},
+        {"label": "Request more info", "description": "Ask Saemi for the preferred install window and any site requirements before confirming"},
+        {"label": "Delay tactfully", "description": "Let her know we're finalizing the schedule and will confirm within 48 hours"}
+      ]
     },
     {
       "from": "Bill Flemming",
       "company": "Cumming Group",
       "subject": "Re: Art - PRC",
       "preview": "Pending response on invoice sent March 29",
-      "urgent": true
+      "urgent": true,
+      "summary": "You sent Bill an invoice on March 29 for artwork selected to date at the PRC project, along with a budget outlook. He hasn't responded in 11 days. The project has a mid-June installation deadline and payment is needed to procure artwork and commissions.",
+      "replyStrategies": [
+        {"label": "Gentle follow-up", "description": "Politely check on payment timing, emphasize the mid-June deadline"},
+        {"label": "Escalate urgency", "description": "Stress that procurement timelines are at risk without payment, request expedited processing"},
+        {"label": "Offer to discuss", "description": "Suggest a quick call to walk through the invoice and budget if there are any questions"}
+      ]
     },
     {
       "from": "Peter Schielke",
       "company": "Ascot Group",
       "subject": "Office Art Program - Estimates",
       "preview": "Awaiting estimate approval for 5 offices",
-      "urgent": false
+      "urgent": false,
+      "summary": "You sent Peter estimates for all 5 Ascot office locations (Ridgeland, Dallas, Denver, Phoenix, NYC) on April 6. You mentioned the NYC frames would be delivered Friday and other offices need 2-4 weeks for fabrication. Waiting on his approval to send a 50% deposit invoice.",
+      "replyStrategies": [
+        {"label": "Check in", "description": "Quick follow-up asking if he's had a chance to review the estimates"},
+        {"label": "Provide update", "description": "Share a progress update on the NYC delivery and ask if estimates look good for the other offices"},
+        {"label": "Hold off", "description": "It's only been 3 days - give him more time before following up"}
+      ]
     },
     {
       "from": "Dylan Keledy",
       "company": "LP CPA",
       "subject": "2025 Tax Returns",
       "preview": "Balance due $114,805 IRS + $43,057 NY by Apr 15",
-      "urgent": true
+      "urgent": true,
+      "summary": "Dylan sent the 2025 tax summary: you owe $114,805 to IRS and $43,057 to NY (includes $5,068 underpayment interest). Q1 2026 estimated taxes of $32,000 IRS + $12,170 NY are also due April 15. Returns are with the tax director for review. Dylan asked about Calvine's childcare expenses ($5,000 dependent care benefits).",
+      "replyStrategies": [
+        {"label": "Confirm and pay", "description": "Confirm the numbers look right, ask for payment instructions, confirm childcare was used"},
+        {"label": "Ask questions", "description": "Ask about reducing the underpayment penalty or setting up estimated payments going forward"},
+        {"label": "Request extension", "description": "Ask if filing an extension is advisable while the returns are still in review"}
+      ]
     }
   ]
 }

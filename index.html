@@ -60,6 +60,27 @@
     .draft-btn:active { background: #e5e7eb; }
     .draft-btn.sent { background: #ecfdf5; border-color: #d1fae5; color: #065f46; }
 
+    /* Email expand */
+    .email-card { cursor: pointer; }
+    .email-summary {
+      max-height: 0; overflow: hidden; opacity: 0;
+      transition: max-height 0.3s ease, opacity 0.2s ease, margin 0.2s ease;
+      margin-top: 0;
+    }
+    .email-summary.open { max-height: 500px; opacity: 1; margin-top: 10px; }
+    .email-summary-text { font-size: 13px; line-height: 1.5; color: #4b5563; }
+    .reply-strategies { margin-top: 10px; }
+    .strategy-btn {
+      display: block; width: 100%; text-align: left;
+      padding: 10px 12px; margin-bottom: 6px;
+      background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px;
+      cursor: pointer; transition: all 0.15s ease;
+    }
+    .strategy-btn:active { background: #f3f4f6; border-color: #d1d5db; }
+    .strategy-btn.sent { background: #ecfdf5; border-color: #d1fae5; }
+    .strategy-label { font-size: 13px; font-weight: 600; color: #111; }
+    .strategy-desc { font-size: 12px; color: #6b7280; margin-top: 2px; }
+
     .section-divider { height: 1px; background: #f0f0f0; }
 
     /* Collapsible priorities */
@@ -286,12 +307,19 @@
         sortedQuick.map(t => renderTaskItem(t.id, t.text)).join('');
 
       // Emails
-      document.getElementById('emailsList').innerHTML = data.emails.map(e => {
+      document.getElementById('emailsList').innerHTML = data.emails.map((e, idx) => {
         const dot = e.urgent
           ? '<span class="w-2 h-2 rounded-full bg-red-400 mt-1.5 min-w-[8px]"></span>'
           : '<span class="w-2 h-2 rounded-full bg-gray-300 mt-1.5 min-w-[8px]"></span>';
+        const safeFrom = e.from.replace(/'/g, '\\\'');
+        const safeSubject = e.subject.replace(/'/g, '\\\'');
+        const strategies = (e.replyStrategies || []).map((s, si) => `
+          <button class="strategy-btn" id="strat-${idx}-${si}" onclick="event.stopPropagation(); sendStrategy('${safeFrom}', '${safeSubject}', '${s.label.replace(/'/g, '\\\'')}', '${s.description.replace(/'/g, '\\\'')}', this)">
+            <div class="strategy-label">${s.label}</div>
+            <div class="strategy-desc">${s.description}</div>
+          </button>`).join('');
         return `
-          <div class="email-card border border-gray-100 rounded-lg p-4 mb-3">
+          <div class="email-card border border-gray-100 rounded-lg p-4 mb-3" onclick="toggleEmail(${idx})">
             <div class="flex items-start gap-3">
               ${dot}
               <div class="flex-1 min-w-0">
@@ -300,11 +328,11 @@
                   <span class="text-xs text-gray-400 whitespace-nowrap">${e.company}</span>
                 </div>
                 <p class="text-sm text-gray-800 mt-0.5">${e.subject}</p>
-                <p class="text-xs text-gray-400 mt-1 truncate">${e.preview}</p>
-                <button class="draft-btn" id="draft-${e.from.replace(/\s/g, '')}" onclick="event.stopPropagation(); draftReply('${e.from.replace(/'/g, '\\\'')}', '${e.subject.replace(/'/g, '\\\'')}', this)">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.83 2.83 0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"/></svg>
-                  Draft reply
-                </button>
+                <p class="text-xs text-gray-400 mt-1 truncate" id="email-preview-${idx}">${e.preview}</p>
+                <div class="email-summary" id="email-detail-${idx}">
+                  <p class="email-summary-text">${e.summary || ''}</p>
+                  ${strategies ? '<div class="reply-strategies">' + strategies + '</div>' : ''}
+                </div>
               </div>
             </div>
           </div>`;
@@ -355,7 +383,40 @@
       }
     });
 
-    // Draft reply
+    // Email expand/collapse
+    let expandedEmails = {};
+    function toggleEmail(idx) {
+      const detail = document.getElementById('email-detail-' + idx);
+      const preview = document.getElementById('email-preview-' + idx);
+      if (detail.classList.contains('open')) {
+        detail.classList.remove('open');
+        if (preview) preview.style.display = '';
+        expandedEmails[idx] = false;
+      } else {
+        detail.classList.add('open');
+        if (preview) preview.style.display = 'none';
+        expandedEmails[idx] = true;
+      }
+    }
+
+    // Send reply strategy
+    async function sendStrategy(from, subject, label, description, btn) {
+      event.stopPropagation();
+      btn.disabled = true;
+      const origHtml = btn.innerHTML;
+      btn.innerHTML = '<div class="strategy-label">Sending...</div>';
+      const text = `Please draft a reply to ${from} re: ${subject}. Strategy: ${label} - ${description}`;
+      const ok = await sendToAndy({ type: 'text', text });
+      if (ok) {
+        btn.classList.add('sent');
+        btn.innerHTML = '<div class="strategy-label">\u2713 Sent to Andy - ' + label + '</div>';
+      } else {
+        btn.innerHTML = origHtml;
+        btn.disabled = false;
+      }
+    }
+
+    // Draft reply (legacy)
     async function draftReply(from, subject, btn) {
       btn.disabled = true;
       btn.innerHTML = '<svg class="animate-spin" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4m0 12v4m-8-10h4m12 0h4"/></svg> Sending...';
