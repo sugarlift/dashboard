@@ -1,0 +1,65 @@
+{
+  "updated": "Thu Apr 10, 2026 8:00 AM ET",
+  "priorities": [
+    {
+      "name": "Mudrick Capital - Artist Procurement",
+      "tasks": [
+        "Confirm Ali Pilli commission timeline",
+        "Follow up on Petr Strnad framing at Sureline",
+        "Send Alexander Jowett FedEx shipping details"
+      ]
+    },
+    {
+      "name": "AKKR - Presentation Finalization",
+      "tasks": [
+        "Review edited artwork images in Airtable",
+        "Confirm artist bios with Neely"
+      ]
+    },
+    {
+      "name": "QBO - Bookkeeping Cleanup",
+      "tasks": [
+        "Review Katie's CC reconciliation progress",
+        "Confirm 2025 P&L with Katie"
+      ]
+    }
+  ],
+  "quickTasks": [
+    "Send portrait pricing to Uncle Stuart",
+    "Check in on PRC invoice with Bill Flemming",
+    "Reply to Artverb re: FedEx decision",
+    "Review Daniel Toliver quote (DESI, Dallas)",
+    "Send LOC statement to Katie",
+    "Pay Q1 2026 estimated taxes ($32K IRS + $12K NY) by Apr 15"
+  ],
+  "emails": [
+    {
+      "from": "Saemi Kim",
+      "company": "Related Companies",
+      "subject": "Willets Point install coordination",
+      "preview": "Following up on the March invoice and delivery schedule",
+      "urgent": true
+    },
+    {
+      "from": "Bill Flemming",
+      "company": "Cumming Group",
+      "subject": "Re: Art - PRC",
+      "preview": "Pending response on invoice sent March 29",
+      "urgent": true
+    },
+    {
+      "from": "Peter Schielke",
+      "company": "Ascot Group",
+      "subject": "Office Art Program - Estimates",
+      "preview": "Awaiting estimate approval for 5 offices",
+      "urgent": false
+    },
+    {
+      "from": "Dylan Keledy",
+      "company": "LP CPA",
+      "subject": "2025 Tax Returns",
+      "preview": "Balance due $114,805 IRS + $43,057 NY by Apr 15",
+      "urgent": true
+    }
+  ]
+}

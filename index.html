@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Sugarlift — Daily Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    * { -webkit-tap-highlight-color: transparent; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
+    
+    .task-item { transition: opacity 0.3s ease, transform 0.15s ease; }
+    .task-item.done .task-text { 
+      text-decoration: line-through; 
+      color: #b0b0b0; 
+      transition: color 0.3s ease; 
+    }
+    .task-item.done .task-check {
+      background: #d1d5db;
+      border-color: #d1d5db;
+    }
+    .task-item.done { opacity: 0.5; }
+    
+    .task-check {
+      width: 20px; height: 20px; min-width: 20px;
+      border: 2px solid #d1d5db; border-radius: 50%;
+      transition: all 0.2s ease;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .task-check svg { opacity: 0; transition: opacity 0.2s ease; }
+    .task-item.done .task-check svg { opacity: 1; }
+
+    .pull-indicator {
+      position: fixed; top: 0; left: 0; right: 0;
+      height: 3px; background: #e5e7eb;
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 0.1s ease;
+      z-index: 50;
+    }
+    .pull-indicator.loading {
+      animation: loading 1s ease-in-out infinite;
+    }
+    @keyframes loading {
+      0% { transform: scaleX(0); transform-origin: left; }
+      50% { transform: scaleX(1); transform-origin: left; }
+      51% { transform-origin: right; }
+      100% { transform: scaleX(0); transform-origin: right; }
+    }
+
+    .email-card { transition: background 0.15s ease; }
+    .email-card:active { background: #f9fafb; }
+
+    .section-divider { height: 1px; background: #f0f0f0; }
+  </style>
+</head>
+<body class="bg-white text-gray-900 min-h-screen">
+  <div class="pull-indicator" id="pullIndicator"></div>
+
+  <div class="max-w-lg mx-auto px-5 py-6 pb-16" id="app">
+    <!-- Header -->
+    <header class="mb-8">
+      <p class="text-xs tracking-widest text-gray-400 uppercase mb-1">Sugarlift</p>
+      <h1 class="text-2xl font-bold text-gray-900">Today</h1>
+      <p class="text-xs text-gray-400 mt-1" id="updatedAt">Loading...</p>
+    </header>
+
+    <!-- Priorities -->
+    <section id="priorities" class="mb-8"></section>
+
+    <div class="section-divider mb-8"></div>
+
+    <!-- Quick Tasks -->
+    <section id="quickTasks" class="mb-8">
+      <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Quick Tasks</h2>
+      <div id="quickTasksList"></div>
+    </section>
+
+    <div class="section-divider mb-8"></div>
+
+    <!-- Emails -->
+    <section id="emails" class="mb-8">
+      <h2 class="text-sm font-semibold text-gray-400 uppercase tracking-wider mb-4">Emails</h2>
+      <div id="emailsList"></div>
+    </section>
+  </div>
+
+  <script>
+    const STORAGE_KEY = 'sugarlift-dashboard-done';
+
+    // State
+    let completedTasks = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+
+    function saveState() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(completedTasks));
+    }
+
+    function toggleTask(id) {
+      if (completedTasks[id]) { delete completedTasks[id]; }
+      else { completedTasks[id] = true; }
+      saveState();
+      renderFromCache();
+    }
+
+    function taskId(section, index, subIndex) {
+      return subIndex !== undefined ? `${section}-${index}-${subIndex}` : `${section}-${index}`;
+    }
+
+    function checkSvg() {
+      return `<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2.5 6L5 8.5L9.5 3.5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+    }
+
+    function renderTaskItem(id, text) {
+      const done = completedTasks[id] ? 'done' : '';
+      return `
+        <div class="task-item flex items-start gap-3 py-2 cursor-pointer select-none ${done}" onclick="toggleTask('${id}')">
+          <div class="task-check mt-0.5">${checkSvg()}</div>
+          <span class="task-text text-sm leading-relaxed">${text}</span>
+        </div>`;
+    }
+
+    let cachedData = null;
+
+    function renderFromCache() {
+      if (!cachedData) return;
+      render(cachedData);
+    }
+
+    function render(data) {
+      cachedData = data;
+      document.getElementById('updatedAt').textContent = `Updated ${data.updated}`;
+
+      // Priorities
+      let prioritiesHtml = '';
+      data.priorities.forEach((p, i) => {
+        prioritiesHtml += `
+          <div class="mb-6">
+            <div class="flex items-baseline gap-3 mb-2">
+              <span class="text-2xl font-bold text-gray-300">${i + 1}</span>
+              <h3 class="text-base font-semibold text-gray-900">${p.name}</h3>
+            </div>
+            <div class="ml-10">
+              ${p.tasks.map((t, j) => renderTaskItem(taskId('p', i, j), t)).join('')}
+            </div>
+          </div>`;
+      });
+      document.getElementById('priorities').innerHTML = prioritiesHtml;
+
+      // Quick Tasks
+      document.getElementById('quickTasksList').innerHTML =
+        data.quickTasks.map((t, i) => renderTaskItem(taskId('q', i), t)).join('');
+
+      // Emails
+      document.getElementById('emailsList').innerHTML = data.emails.map(e => {
+        const dot = e.urgent
+          ? '<span class="w-2 h-2 rounded-full bg-red-400 mt-1.5 min-w-[8px]"></span>'
+          : '<span class="w-2 h-2 rounded-full bg-gray-300 mt-1.5 min-w-[8px]"></span>';
+        return `
+          <div class="email-card border border-gray-100 rounded-lg p-4 mb-3">
+            <div class="flex items-start gap-3">
+              ${dot}
+              <div class="flex-1 min-w-0">
+                <div class="flex items-baseline justify-between gap-2">
+                  <span class="text-sm font-semibold truncate">${e.from}</span>
+                  <span class="text-xs text-gray-400 whitespace-nowrap">${e.company}</span>
+                </div>
+                <p class="text-sm text-gray-800 mt-0.5">${e.subject}</p>
+                <p class="text-xs text-gray-400 mt-1 truncate">${e.preview}</p>
+              </div>
+            </div>
+          </div>`;
+      }).join('');
+    }
+
+    // Fetch data
+    async function loadData() {
+      try {
+        const res = await fetch('data/priorities.json?' + Date.now());
+        const data = await res.json();
+        render(data);
+      } catch (err) {
+        console.error('Failed to load data:', err);
+      }
+    }
+
+    // Pull to refresh
+    let startY = 0, pulling = false;
+    const indicator = document.getElementById('pullIndicator');
+
+    document.addEventListener('touchstart', e => {
+      if (window.scrollY === 0) { startY = e.touches[0].clientY; pulling = true; }
+    }, { passive: true });
+
+    document.addEventListener('touchmove', e => {
+      if (!pulling) return;
+      const dy = e.touches[0].clientY - startY;
+      if (dy > 0 && dy < 150) {
+        indicator.style.transform = `scaleX(${dy / 150})`;
+      }
+    }, { passive: true });
+
+    document.addEventListener('touchend', () => {
+      if (!pulling) return;
+      pulling = false;
+      const current = indicator.style.transform;
+      if (current && parseFloat(current.match(/[\d.]+/)?.[0] || 0) > 0.6) {
+        indicator.classList.add('loading');
+        loadData().then(() => {
+          setTimeout(() => {
+            indicator.classList.remove('loading');
+            indicator.style.transform = 'scaleX(0)';
+          }, 500);
+        });
+      } else {
+        indicator.style.transform = 'scaleX(0)';
+      }
+    });
+
+    // Init
+    loadData();
+  </script>
+</body>
+</html>
