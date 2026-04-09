@@ -196,15 +196,16 @@
 
     // State
     let completedTasks = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
-    let collapsedPriorities = JSON.parse(localStorage.getItem(COLLAPSE_KEY) || '{}');
+    // Default: all collapsed. Store EXPANDED state instead.
+    let expandedPriorities = JSON.parse(localStorage.getItem(COLLAPSE_KEY) || '{}');
 
     function saveCollapseState() {
-      localStorage.setItem(COLLAPSE_KEY, JSON.stringify(collapsedPriorities));
+      localStorage.setItem(COLLAPSE_KEY, JSON.stringify(expandedPriorities));
     }
 
     function togglePriority(index) {
-      if (collapsedPriorities[index]) { delete collapsedPriorities[index]; }
-      else { collapsedPriorities[index] = true; }
+      if (expandedPriorities[index]) { delete expandedPriorities[index]; }
+      else { expandedPriorities[index] = true; }
       saveCollapseState();
       renderFromCache();
     }
@@ -251,7 +252,7 @@
       // Priorities (collapsible, completed tasks sink to bottom)
       let prioritiesHtml = '';
       data.priorities.forEach((p, i) => {
-        const isCollapsed = collapsedPriorities[i];
+        const isCollapsed = !expandedPriorities[i];
         const chevronClass = isCollapsed ? 'chevron collapsed' : 'chevron';
         const tasksClass = isCollapsed ? 'priority-tasks collapsed' : 'priority-tasks';
 
