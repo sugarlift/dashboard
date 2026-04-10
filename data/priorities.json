@@ -1,5 +1,5 @@
 {
-  "updated": "Fri Apr 10, 2026 4:30 PM ET",
+  "updated": "Fri Apr 10, 2026 5:00 PM ET",
   "priorities": [
     {
       "name": "Mudrick Capital - Artist Procurement",
@@ -56,6 +56,28 @@
       ]
     },
     {
+      "from": "Aaron Wexler",
+      "company": "",
+      "subject": "Lily 1 & 2.",
+      "preview": "Hi Wright, Just touching base with you about final payment for Lily 1 &amp; 2. Lily 1 - $1175 and Lily 2 (the remaining ",
+      "urgent": false,
+      "summary": "Aaron Wexler re: Lily 1 & 2.. Just touching base with you about final payment for Lily 1 & 2. Lily 1 - $1,175 and Lily 2 (the remaining 15%) - $195.",
+      "replyStrategies": [
+        {
+          "label": "Confirm payment",
+          "description": "Acknowledge the invoice/payment and confirm processing timeline"
+        },
+        {
+          "label": "Follow up on timeline",
+          "description": "Ask about payment schedule or request an updated timeline"
+        },
+        {
+          "label": "Request details",
+          "description": "Ask for additional details on the invoice or payment terms"
+        }
+      ]
+    },
+    {
       "from": "Nancy Carlson",
       "company": "",
       "subject": "Re: Art Update",
@@ -74,6 +96,28 @@
         {
           "label": "Request more context",
           "description": "Ask for clarification before committing to an answer"
+        }
+      ]
+    },
+    {
+      "from": "Williams Oregon",
+      "company": "",
+      "subject": "Invitation to Feature Your Work in a Digital Art Exhibition",
+      "preview": "Dear Kostas, I am interested in purchasing between 5 and 10 of your artworks for an upcoming exhibition. I would like to",
+      "urgent": false,
+      "summary": "Williams Oregon re: Invitation to Feature Your Work in a Digital Art Exhibition. I am interested in purchasing between 5 and 10 of your artworks for an. I would like to acquire them exclusively as digital.",
+      "replyStrategies": [
+        {
+          "label": "Accept and schedule",
+          "description": "Express interest and suggest a time to connect"
+        },
+        {
+          "label": "Decline politely",
+          "description": "Thank them but pass on the opportunity for now"
+        },
+        {
+          "label": "Request more info",
+          "description": "Ask for more details before committing to a meeting"
         }
       ]
     },
