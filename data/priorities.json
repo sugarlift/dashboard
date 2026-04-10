@@ -1,5 +1,5 @@
 {
-  "updated": "Fri Apr 10, 2026 1:00 PM ET",
+  "updated": "Fri Apr 10, 2026 1:30 PM ET",
   "priorities": [
     {
       "name": "Mudrick Capital - Artist Procurement",
@@ -84,6 +84,28 @@
       "preview": "Many thanks, Karen. Apologies for slow response. My answers below in red. Keen to get the art work finalized! On Apr 8, ",
       "urgent": false,
       "summary": "Nancy Carlson re: Re: Art Update. Apologies for slow response. My answers below in red.",
+      "replyStrategies": [
+        {
+          "label": "Answer directly",
+          "description": "Provide a clear, direct response to the question asked"
+        },
+        {
+          "label": "Delegate to team",
+          "description": "Loop in Neely or relevant team member to handle"
+        },
+        {
+          "label": "Request more context",
+          "description": "Ask for clarification before committing to an answer"
+        }
+      ]
+    },
+    {
+      "from": "St. B's PA Announcements",
+      "company": "Myschoolemails",
+      "subject": "Volunteer for the Family Benefit",
+      "preview": "If you are having trouble viewing this email, click here Benefit Volunteers April 10, 2026 Dear Parents, Step right up, ",
+      "urgent": false,
+      "summary": "St. B's PA Announcements (Myschoolemails) re: Volunteer for the Family Benefit. Google's filtering settings are causing this email to be sent as a link. <br />( https://stbernards.",
       "replyStrategies": [
         {
           "label": "Answer directly",
