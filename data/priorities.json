@@ -1,5 +1,5 @@
 {
-  "updated": "Fri Apr 10, 2026 12:30 PM ET",
+  "updated": "Fri Apr 10, 2026 1:00 PM ET",
   "priorities": [
     {
       "name": "Mudrick Capital - Artist Procurement",
@@ -33,6 +33,28 @@
     "Pay Q1 2026 estimated taxes ($32K IRS + $12K NY) by Apr 15"
   ],
   "emails": [
+    {
+      "from": "Neely Metz",
+      "company": "Sugarlift",
+      "subject": "424 Art Review - LXR & HGV (4/10)",
+      "preview": "Hi Team, Looking forward to our call this afternoon! Attached please find our Round II artwork options for the LXR and H",
+      "urgent": false,
+      "summary": "Neely Metz (Sugarlift) re: 424 Art Review - LXR & HGV (4/10). Looking forward to our call this afternoon. Attached please find our Round II artwork options for the LXR and HGV model.",
+      "replyStrategies": [
+        {
+          "label": "Reply positively",
+          "description": "Acknowledge and respond with next steps or confirmation"
+        },
+        {
+          "label": "Request more info",
+          "description": "Ask for additional details or clarification"
+        },
+        {
+          "label": "Defer and follow up later",
+          "description": "Acknowledge receipt and note you'll follow up shortly"
+        }
+      ]
+    },
     {
       "from": "Kim, Saemi",
       "company": "Related Companies",
