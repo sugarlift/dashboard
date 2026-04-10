@@ -1,5 +1,5 @@
 {
-  "updated": "Fri Apr 10, 2026 2:00 PM ET",
+  "updated": "Fri Apr 10, 2026 2:30 PM ET",
   "priorities": [
     {
       "name": "Mudrick Capital - Artist Procurement",
@@ -34,6 +34,28 @@
   ],
   "emails": [
     {
+      "from": "Kim, Saemi",
+      "company": "Related Companies",
+      "subject": "RE: Willets Point",
+      "preview": "Hi Wright and Neely- We have a change in plan. Can we ask Kenny&#39;s assistant and install Kenny&#39;s work and Laura&#",
+      "urgent": false,
+      "summary": "Kim, Saemi (Related Companies) re: RE: Willets Point. We have a change in plan. Can we ask Kenny\u2019s assistant and install Kenny\u2019s work and Laura\u2019s work in the lobby on 4/16 and 4/17.",
+      "replyStrategies": [
+        {
+          "label": "Confirm payment",
+          "description": "Acknowledge the invoice/payment and confirm processing timeline"
+        },
+        {
+          "label": "Follow up on timeline",
+          "description": "Ask about payment schedule or request an updated timeline"
+        },
+        {
+          "label": "Request details",
+          "description": "Ask for additional details on the invoice or payment terms"
+        }
+      ]
+    },
+    {
       "from": "Neely Metz",
       "company": "Sugarlift",
       "subject": "424 Art Review - LXR & HGV (4/10)",
@@ -56,34 +78,56 @@
       ]
     },
     {
-      "from": "Kim, Saemi",
-      "company": "Related Companies",
-      "subject": "RE: Willets Point",
-      "preview": "Any way all these 4 can be at $25K? Saemi Kim Senior Project Manager, Design &amp; Construction RELATED COMPANIES 30 Hud",
-      "urgent": false,
-      "summary": "Kim, Saemi (Related Companies) re: RE: Willets Point. Any way all these 4 can be at $25K. Senior Project Manager, Design & Construction.",
-      "replyStrategies": [
-        {
-          "label": "Confirm payment",
-          "description": "Acknowledge the invoice/payment and confirm processing timeline"
-        },
-        {
-          "label": "Follow up on timeline",
-          "description": "Ask about payment schedule or request an updated timeline"
-        },
-        {
-          "label": "Request details",
-          "description": "Ask for additional details on the invoice or payment terms"
-        }
-      ]
-    },
-    {
       "from": "Nancy Carlson",
       "company": "",
       "subject": "Re: Art Update",
       "preview": "Many thanks, Karen. Apologies for slow response. My answers below in red. Keen to get the art work finalized! On Apr 8, ",
       "urgent": false,
       "summary": "Nancy Carlson re: Re: Art Update. Apologies for slow response. My answers below in red.",
+      "replyStrategies": [
+        {
+          "label": "Answer directly",
+          "description": "Provide a clear, direct response to the question asked"
+        },
+        {
+          "label": "Delegate to team",
+          "description": "Loop in Neely or relevant team member to handle"
+        },
+        {
+          "label": "Request more context",
+          "description": "Ask for clarification before committing to an answer"
+        }
+      ]
+    },
+    {
+      "from": "Robert Bollman",
+      "company": "Globalmarkets",
+      "subject": "TD Corporate Access & Analyst Marketing Calendar",
+      "preview": "Corporate Marketing &amp; Industry Expert Events Date Company Name Sector Location 4/16 Linamar (LNR) Autos &amp; Auto P",
+      "urgent": false,
+      "summary": "Robert Bollman (Globalmarkets) re: TD Corporate Access & Analyst Marketing Calendar. [TD Securities Corporate Access  Global Marketing Update]. Corporate Marketing & Industry Expert Events.",
+      "replyStrategies": [
+        {
+          "label": "Approve and proceed",
+          "description": "Confirm the update and give the green light to move forward"
+        },
+        {
+          "label": "Request changes",
+          "description": "Note any concerns or adjustments needed before proceeding"
+        },
+        {
+          "label": "Schedule call to discuss",
+          "description": "Suggest a quick call to align on next steps"
+        }
+      ]
+    },
+    {
+      "from": "Elizabeth Cavanaugh",
+      "company": "Nightingale",
+      "subject": "Re: Middle School Welcome Party May 6 5:00-6:00 P.M.",
+      "preview": "Thank you so much, Calvine and Wright! Looking forward to having you and Jojo there. I will send a reminder closer to th",
+      "urgent": false,
+      "summary": "Elizabeth Cavanaugh (Nightingale) re: Re: Middle School Welcome Party May 6 5:00-6:00 P.M.. Thank you so much, Calvine and Wright. Looking forward to having you and.",
       "replyStrategies": [
         {
           "label": "Answer directly",
