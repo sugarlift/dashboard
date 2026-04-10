@@ -1,5 +1,5 @@
 {
-  "updated": "Fri Apr 10, 2026 10:00 AM ET",
+  "updated": "Fri Apr 10, 2026 10:30 AM ET",
   "priorities": [
     {
       "name": "Mudrick Capital - Artist Procurement",
@@ -96,6 +96,28 @@
         {
           "label": "Request more context",
           "description": "Ask for clarification before committing to an answer"
+        }
+      ]
+    },
+    {
+      "from": "Samantha Ellis",
+      "company": "Hilton",
+      "subject": "Hilton NY Lifestyle Art Dealer RFP",
+      "preview": "Hi Sugarlift Team, We recently recognized the RFP Update notifications did not deliver. My sincere apologies for the app",
+      "urgent": false,
+      "summary": "Samantha Ellis (Hilton) re: Hilton NY Lifestyle Art Dealer RFP. We recently recognized the RFP Update notifications did not deliver. My sincere apologies for the apparent gap in communication.",
+      "replyStrategies": [
+        {
+          "label": "Approve and proceed",
+          "description": "Confirm the update and give the green light to move forward"
+        },
+        {
+          "label": "Request changes",
+          "description": "Note any concerns or adjustments needed before proceeding"
+        },
+        {
+          "label": "Schedule call to discuss",
+          "description": "Suggest a quick call to align on next steps"
         }
       ]
     }
