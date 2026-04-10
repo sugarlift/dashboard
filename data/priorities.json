@@ -1,5 +1,5 @@
 {
-  "updated": "Fri Apr 10, 2026 11:00 AM ET",
+  "updated": "Fri Apr 10, 2026 11:30 AM ET",
   "priorities": [
     {
       "name": "Mudrick Capital - Artist Procurement",
@@ -34,12 +34,34 @@
   ],
   "emails": [
     {
+      "from": "Motomi Morii",
+      "company": "Georgetown Co",
+      "subject": "HGV Revised Bed Base",
+      "preview": "Hi Wright and Neely, Attached is the updated bed base design. See if you could update the rendering to integrate this an",
+      "urgent": true,
+      "summary": "Motomi Morii (Georgetown Co) re: HGV Revised Bed Base. Attached is the updated bed base design. See if you could update the rendering to integrate this and remove the rug, for DRC Art presentation purposes.",
+      "replyStrategies": [
+        {
+          "label": "Approve and proceed",
+          "description": "Confirm the update and give the green light to move forward"
+        },
+        {
+          "label": "Request changes",
+          "description": "Note any concerns or adjustments needed before proceeding"
+        },
+        {
+          "label": "Schedule call to discuss",
+          "description": "Suggest a quick call to align on next steps"
+        }
+      ]
+    },
+    {
       "from": "Calvine Dunnan",
       "company": "",
-      "subject": "Maine dates 2026",
-      "preview": "Now that the sun is finally shining and it is beginning to be spring, we can all look forward to our time in Maine this ",
+      "subject": "Re: Maine dates 2026",
+      "preview": "Updated schedule attached...ignore the first one!! On Fri, Apr 10, 2026 at 7:39 AM Calvine Dunnan &lt;cbdunnan@gmail.com",
       "urgent": false,
-      "summary": "Calvine Dunnan re: Maine dates 2026. Now that the sun is finally shining and it is beginning to be spring, we. can all look forward to our time in Maine this summer.",
+      "summary": "Calvine Dunnan re: Re: Maine dates 2026. Updated schedule attached.",
       "replyStrategies": [
         {
           "label": "Approve and proceed",
@@ -96,28 +118,6 @@
         {
           "label": "Request more context",
           "description": "Ask for clarification before committing to an answer"
-        }
-      ]
-    },
-    {
-      "from": "Tia Kavanaugh",
-      "company": "Fogartyfinger",
-      "subject": "Mudrick Art Install",
-      "preview": "________________________________________________________________________________ Microsoft Teams meeting Join: https://t",
-      "urgent": false,
-      "summary": "Tia Kavanaugh (Fogartyfinger) re: Mudrick Art Install. ________________________________________________________________________________. Microsoft Teams meeting.",
-      "replyStrategies": [
-        {
-          "label": "Approve and proceed",
-          "description": "Confirm the update and give the green light to move forward"
-        },
-        {
-          "label": "Request changes",
-          "description": "Note any concerns or adjustments needed before proceeding"
-        },
-        {
-          "label": "Schedule call to discuss",
-          "description": "Suggest a quick call to align on next steps"
         }
       ]
     }
