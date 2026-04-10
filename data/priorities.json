@@ -1,5 +1,5 @@
 {
-  "updated": "Fri Apr 10, 2026 7:30 AM ET",
+  "updated": "Fri Apr 10, 2026 8:00 AM ET",
   "priorities": [
     {
       "name": "Mudrick Capital - Artist Procurement",
@@ -34,6 +34,28 @@
   ],
   "emails": [
     {
+      "from": "Calvine Dunnan",
+      "company": "",
+      "subject": "Maine dates 2026",
+      "preview": "Now that the sun is finally shining and it is beginning to be spring, we can all look forward to our time in Maine this ",
+      "urgent": false,
+      "summary": "Calvine Dunnan re: Maine dates 2026. Now that the sun is finally shining and it is beginning to be spring, we. can all look forward to our time in Maine this summer.",
+      "replyStrategies": [
+        {
+          "label": "Approve and proceed",
+          "description": "Confirm the update and give the green light to move forward"
+        },
+        {
+          "label": "Request changes",
+          "description": "Note any concerns or adjustments needed before proceeding"
+        },
+        {
+          "label": "Schedule call to discuss",
+          "description": "Suggest a quick call to align on next steps"
+        }
+      ]
+    },
+    {
       "from": "Kim, Saemi",
       "company": "Related Companies",
       "subject": "RE: Willets Point",
@@ -52,28 +74,6 @@
         {
           "label": "Request details",
           "description": "Ask for additional details on the invoice or payment terms"
-        }
-      ]
-    },
-    {
-      "from": "Karen M",
-      "company": "",
-      "subject": "Art Update",
-      "preview": "See attached: Please give me your thoughts on the following: 1. Which color of shells do you prefer for the breezeway: 1",
-      "urgent": false,
-      "summary": "Karen M re: Art Update. Please give me your thoughts on the following:. Which color of shells do you prefer for the breezeway:  1, 2 or 3.",
-      "replyStrategies": [
-        {
-          "label": "Answer directly",
-          "description": "Provide a clear, direct response to the question asked"
-        },
-        {
-          "label": "Delegate to team",
-          "description": "Loop in Neely or relevant team member to handle"
-        },
-        {
-          "label": "Request more context",
-          "description": "Ask for clarification before committing to an answer"
         }
       ]
     }
