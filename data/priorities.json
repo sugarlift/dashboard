@@ -1,5 +1,5 @@
 {
-  "updated": "Fri Apr 10, 2026 8:30 AM ET",
+  "updated": "Fri Apr 10, 2026 9:00 AM ET",
   "priorities": [
     {
       "name": "Mudrick Capital - Artist Procurement",
@@ -74,6 +74,28 @@
         {
           "label": "Request details",
           "description": "Ask for additional details on the invoice or payment terms"
+        }
+      ]
+    },
+    {
+      "from": "Nancy Carlson",
+      "company": "",
+      "subject": "Re: Art Update",
+      "preview": "Many thanks, Karen. Apologies for slow response. My answers below in red. Keen to get the art work finalized! On Apr 8, ",
+      "urgent": false,
+      "summary": "Nancy Carlson re: Re: Art Update. Apologies for slow response. My answers below in red.",
+      "replyStrategies": [
+        {
+          "label": "Answer directly",
+          "description": "Provide a clear, direct response to the question asked"
+        },
+        {
+          "label": "Delegate to team",
+          "description": "Loop in Neely or relevant team member to handle"
+        },
+        {
+          "label": "Request more context",
+          "description": "Ask for clarification before committing to an answer"
         }
       ]
     }
