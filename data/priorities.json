@@ -1,5 +1,5 @@
 {
-  "updated": "Fri Apr 10, 2026 10:30 PM ET",
+  "updated": "Sat Apr 11, 2026 7:00 AM ET",
   "priorities": [
     {
       "name": "Mudrick Capital - Artist Procurement",
@@ -96,28 +96,6 @@
         {
           "label": "Request more context",
           "description": "Ask for clarification before committing to an answer"
-        }
-      ]
-    },
-    {
-      "from": "Sarina Charugundla",
-      "company": "Rinx",
-      "subject": "artRINX Event Invitation",
-      "preview": "Dear Wright, I noticed that Sugarlift Gallery and artRINX have a very similar user base, and wanted to extend an invitat",
-      "urgent": false,
-      "summary": "Sarina Charugundla (Rinx) re: artRINX Event Invitation. I noticed that Sugarlift Gallery and artRINX have a very similar user base,. and wanted to extend an invitation to our launch event next week.",
-      "replyStrategies": [
-        {
-          "label": "Confirm payment",
-          "description": "Acknowledge the invoice/payment and confirm processing timeline"
-        },
-        {
-          "label": "Follow up on timeline",
-          "description": "Ask about payment schedule or request an updated timeline"
-        },
-        {
-          "label": "Request details",
-          "description": "Ask for additional details on the invoice or payment terms"
         }
       ]
     },
