@@ -1,5 +1,5 @@
 {
-  "updated": "Sat Apr 11, 2026 11:30 AM ET",
+  "updated": "Sat Apr 11, 2026 12:00 PM ET",
   "priorities": [
     {
       "name": "Mudrick Capital - Artist Procurement",
@@ -118,6 +118,28 @@
         {
           "label": "Request more context",
           "description": "Ask for clarification before committing to an answer"
+        }
+      ]
+    },
+    {
+      "from": "The Miro Team",
+      "company": "Product",
+      "subject": "Mobile App Sign-in",
+      "preview": "\u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c ",
+      "urgent": false,
+      "summary": "The Miro Team (Product) re: Mobile App Sign-in. \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f. \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c.",
+      "replyStrategies": [
+        {
+          "label": "Reply positively",
+          "description": "Acknowledge and respond with next steps or confirmation"
+        },
+        {
+          "label": "Request more info",
+          "description": "Ask for additional details or clarification"
+        },
+        {
+          "label": "Defer and follow up later",
+          "description": "Acknowledge receipt and note you'll follow up shortly"
         }
       ]
     }
