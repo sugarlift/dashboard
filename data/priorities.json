@@ -1,5 +1,5 @@
 {
-  "updated": "Sun Apr 12, 2026 6:00 PM ET",
+  "updated": "Sun Apr 12, 2026 6:30 PM ET",
   "priorities": [
     {
       "name": "Mudrick Capital - Artist Procurement",
@@ -52,6 +52,28 @@
         {
           "label": "Request details",
           "description": "Ask for additional details on the invoice or payment terms"
+        }
+      ]
+    },
+    {
+      "from": "Ann Nilsen",
+      "company": "",
+      "subject": "This Week at STMPG",
+      "preview": "Dear Parents, It finally feels like spring has arrived, and we have a busy and exciting week ahead! This Week at STMPG: ",
+      "urgent": false,
+      "summary": "Ann Nilsen re: This Week at STMPG. It finally feels like spring has arrived, and we have a busy and exciting. *This Week at STMPG:*.",
+      "replyStrategies": [
+        {
+          "label": "Accept and schedule",
+          "description": "Express interest and suggest a time to connect"
+        },
+        {
+          "label": "Decline politely",
+          "description": "Thank them but pass on the opportunity for now"
+        },
+        {
+          "label": "Request more info",
+          "description": "Ask for more details before committing to a meeting"
         }
       ]
     },
