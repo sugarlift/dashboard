@@ -1,5 +1,5 @@
 {
-  "updated": "Sat Apr 11, 2026 10:00 PM ET",
+  "updated": "Sat Apr 11, 2026 10:30 PM ET",
   "priorities": [
     {
       "name": "Mudrick Capital - Artist Procurement",
@@ -118,6 +118,28 @@
         {
           "label": "Request details",
           "description": "Ask for additional details on the invoice or payment terms"
+        }
+      ]
+    },
+    {
+      "from": "Irvin Bomb",
+      "company": "Irvinbomb",
+      "subject": "Artist Inquiry \u2013 Contemporary Realism / Figurative Work \u2013 Irvin Bomb",
+      "preview": "Dear Curation Team, Hope this message finds you well. I would like to present my artwork for your consideration. Here&#3",
+      "urgent": false,
+      "summary": "Irvin Bomb (Irvinbomb) re: Artist Inquiry \u2013 Contemporary Realism / Figurative Work \u2013 Irvin Bomb. Hope this message finds you well. I would like to present my artwork for.",
+      "replyStrategies": [
+        {
+          "label": "Approve and proceed",
+          "description": "Confirm the update and give the green light to move forward"
+        },
+        {
+          "label": "Request changes",
+          "description": "Note any concerns or adjustments needed before proceeding"
+        },
+        {
+          "label": "Schedule call to discuss",
+          "description": "Suggest a quick call to align on next steps"
         }
       ]
     },
