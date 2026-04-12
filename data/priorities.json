@@ -1,5 +1,5 @@
 {
-  "updated": "Sun Apr 12, 2026 8:00 AM ET",
+  "updated": "Sun Apr 12, 2026 8:30 AM ET",
   "priorities": [
     {
       "name": "Mudrick Capital - Artist Procurement",
@@ -118,6 +118,28 @@
         {
           "label": "Request details",
           "description": "Ask for additional details on the invoice or payment terms"
+        }
+      ]
+    },
+    {
+      "from": "St. Bernard's School",
+      "company": "Myschoolemails",
+      "subject": "St. B's: The St. Bernard's Bark, April 13-17",
+      "preview": "If you are having trouble viewing this email, click here Home | CALENDAR | Login Upcoming Events Sunday, April 12, 2026 ",
+      "urgent": false,
+      "summary": "St. Bernard's School (Myschoolemails) re: St. B's: The St. Bernard's Bark, April 13-17. Google's filtering settings are causing this email to be sent as a link. <br />( https://stbernards.",
+      "replyStrategies": [
+        {
+          "label": "Answer directly",
+          "description": "Provide a clear, direct response to the question asked"
+        },
+        {
+          "label": "Delegate to team",
+          "description": "Loop in Neely or relevant team member to handle"
+        },
+        {
+          "label": "Request more context",
+          "description": "Ask for clarification before committing to an answer"
         }
       ]
     },
