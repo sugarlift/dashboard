@@ -1,5 +1,5 @@
 {
-  "updated": "Sun Apr 12, 2026 10:00 AM ET",
+  "updated": "Sun Apr 12, 2026 10:30 AM ET",
   "priorities": [
     {
       "name": "Mudrick Capital - Artist Procurement",
@@ -100,6 +100,28 @@
       ]
     },
     {
+      "from": "EXPO CHICAGO",
+      "company": "Expochicago",
+      "subject": "Last chance for EXPO CHICAGO 2026",
+      "preview": "\u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c \u034f \u200c ",
+      "urgent": false,
+      "summary": "EXPO CHICAGO (Expochicago) re: Last chance for EXPO CHICAGO 2026. View this email in your browser (https://mailchi. mp/expochicago/last-chance-for-expo-chicago-2026.",
+      "replyStrategies": [
+        {
+          "label": "Accept and schedule",
+          "description": "Express interest and suggest a time to connect"
+        },
+        {
+          "label": "Decline politely",
+          "description": "Thank them but pass on the opportunity for now"
+        },
+        {
+          "label": "Request more info",
+          "description": "Ask for more details before committing to a meeting"
+        }
+      ]
+    },
+    {
       "from": "NYC Bulldogs",
       "company": "Leagueapps",
       "subject": "Event Reminder: Bulldogs Baseball - STMPG on Tuesday at 1:00 PM",
@@ -184,28 +206,6 @@
         {
           "label": "Request more info",
           "description": "Ask for more details before committing to a meeting"
-        }
-      ]
-    },
-    {
-      "from": "St. Bernard's School",
-      "company": "Myschoolemails",
-      "subject": "St. B's: Banana Splits",
-      "preview": "If you are having trouble viewing this email, click here Home | Calendar | Login Banana Splits April 10, 2026 Dear Paren",
-      "urgent": false,
-      "summary": "St. Bernard's School (Myschoolemails) re: St. B's: Banana Splits. Google's filtering settings are causing this email to be sent as a link. <br />( https://stbernards.",
-      "replyStrategies": [
-        {
-          "label": "Answer directly",
-          "description": "Provide a clear, direct response to the question asked"
-        },
-        {
-          "label": "Delegate to team",
-          "description": "Loop in Neely or relevant team member to handle"
-        },
-        {
-          "label": "Request more context",
-          "description": "Ask for clarification before committing to an answer"
         }
       ]
     }
