@@ -1,5 +1,5 @@
 {
-  "updated": "Sun Apr 12, 2026 12:30 PM ET",
+  "updated": "Sun Apr 12, 2026 1:00 PM ET",
   "priorities": [
     {
       "name": "Mudrick Capital - Artist Procurement",
@@ -33,28 +33,6 @@
     "Pay Q1 2026 estimated taxes ($32K IRS + $12K NY) by Apr 15"
   ],
   "emails": [
-    {
-      "from": "Neely Metz",
-      "company": "Sugarlift",
-      "subject": "424 Art Review - LXR & HGV (4/10)",
-      "preview": "Hi Team, Looking forward to our call this afternoon! Attached please find our Round II artwork options for the LXR and H",
-      "urgent": false,
-      "summary": "Neely Metz (Sugarlift) re: 424 Art Review - LXR & HGV (4/10). Looking forward to our call this afternoon. Attached please find our Round II artwork options for the LXR and HGV model.",
-      "replyStrategies": [
-        {
-          "label": "Reply positively",
-          "description": "Acknowledge and respond with next steps or confirmation"
-        },
-        {
-          "label": "Request more info",
-          "description": "Ask for additional details or clarification"
-        },
-        {
-          "label": "Defer and follow up later",
-          "description": "Acknowledge receipt and note you'll follow up shortly"
-        }
-      ]
-    },
     {
       "from": "Alexander Jowett",
       "company": "",
@@ -96,6 +74,28 @@
         {
           "label": "Request details",
           "description": "Ask for additional details on the invoice or payment terms"
+        }
+      ]
+    },
+    {
+      "from": "FedEx Tracking",
+      "company": "Fedex",
+      "subject": "Your shipment is scheduled for delivery tomorrow 870172742407",
+      "preview": "Your shipment is scheduled to arrive tomorrow. Your shipment is scheduled for delivery tomorrow. Scheduled delivery date",
+      "urgent": false,
+      "summary": "FedEx Tracking (Fedex) re: Your shipment is scheduled for delivery tomorrow 870172742407. Your shipment is scheduled to arrive tomorrow. Your shipment is scheduled for delivery tomorrow.",
+      "replyStrategies": [
+        {
+          "label": "Approve and proceed",
+          "description": "Confirm the update and give the green light to move forward"
+        },
+        {
+          "label": "Request changes",
+          "description": "Note any concerns or adjustments needed before proceeding"
+        },
+        {
+          "label": "Schedule call to discuss",
+          "description": "Suggest a quick call to align on next steps"
         }
       ]
     },
