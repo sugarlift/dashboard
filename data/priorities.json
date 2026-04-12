@@ -1,5 +1,5 @@
 {
-  "updated": "Sat Apr 11, 2026 8:30 PM ET",
+  "updated": "Sat Apr 11, 2026 9:00 PM ET",
   "priorities": [
     {
       "name": "Mudrick Capital - Artist Procurement",
@@ -52,6 +52,28 @@
         {
           "label": "Defer and follow up later",
           "description": "Acknowledge receipt and note you'll follow up shortly"
+        }
+      ]
+    },
+    {
+      "from": "Alexander Jowett",
+      "company": "",
+      "subject": "Re: FedEx Shipping Label",
+      "preview": "HI Wright, is it possible to book this for p/u from my address? Sometimes downtown locations won&#39;t take boxes of a c",
+      "urgent": false,
+      "summary": "Alexander Jowett re: Re: FedEx Shipping Label. HI Wright, is it possible to book this for p/u from my address. downtown locations won't take boxes of a certain size and p/u generally.",
+      "replyStrategies": [
+        {
+          "label": "Confirm payment",
+          "description": "Acknowledge the invoice/payment and confirm processing timeline"
+        },
+        {
+          "label": "Follow up on timeline",
+          "description": "Ask about payment schedule or request an updated timeline"
+        },
+        {
+          "label": "Request details",
+          "description": "Ask for additional details on the invoice or payment terms"
         }
       ]
     },
