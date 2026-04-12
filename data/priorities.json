@@ -1,5 +1,5 @@
 {
-  "updated": "Sun Apr 12, 2026 9:00 AM ET",
+  "updated": "Sun Apr 12, 2026 9:30 AM ET",
   "priorities": [
     {
       "name": "Mudrick Capital - Artist Procurement",
@@ -96,6 +96,28 @@
         {
           "label": "Request details",
           "description": "Ask for additional details on the invoice or payment terms"
+        }
+      ]
+    },
+    {
+      "from": "NYC Bulldogs",
+      "company": "Leagueapps",
+      "subject": "Event Reminder: Bulldogs Baseball - STMPG on Tuesday at 1:00 PM",
+      "preview": "Upcoming event for STMPG T-Ball (Ages 3-4) You have an event scheduled for Tuesday at 1:00 PM. The details are below: Ev",
+      "urgent": false,
+      "summary": "NYC Bulldogs (Leagueapps) re: Event Reminder: Bulldogs Baseball - STMPG on Tuesday at 1:00 PM. You have an event scheduled for Tuesday at 1:00 PM. - Yes: https://bulldogballclub.",
+      "replyStrategies": [
+        {
+          "label": "Approve and proceed",
+          "description": "Confirm the update and give the green light to move forward"
+        },
+        {
+          "label": "Request changes",
+          "description": "Note any concerns or adjustments needed before proceeding"
+        },
+        {
+          "label": "Schedule call to discuss",
+          "description": "Suggest a quick call to align on next steps"
         }
       ]
     },
